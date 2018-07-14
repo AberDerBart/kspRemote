@@ -9,7 +9,6 @@ class FuelBar(Widget):
 class FuelWidget(BoxLayout):
 	label = ObjectProperty()
 	meter = ObjectProperty()
-	label = ObjectProperty()
 		
 class FuelOverview(BoxLayout):
 	widgets={}

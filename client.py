@@ -6,7 +6,10 @@ class ClientDummy:
 	def getVessel(self):
 		return 'vessel'
 	def pollResources(self,vessel):
-		return {'liquid':{'max':10,'amount':3},'oxi':{'max':12,'amount':5}}
+		d={}
+		for i in range(1,6):
+			d[str(i)]={'max':20,'amount':i}
+		return d
 
 class Client:
 	def __init__(self):

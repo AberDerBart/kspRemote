@@ -1,7 +1,7 @@
 from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.button import Button
-from client import ClientDummy as Client
+from client import Client as Client
 from kivy.properties import ObjectProperty
 from kivy.clock import Clock
 
