@@ -1,0 +1,32 @@
+#:kivy 1.10.1
+#:import FuelWidget fuelWidget.FuelWidget
+#:import FuelBar fuelWidget.FuelBar
+#:import FuelOverview fuelWidget.FuelOverview
+
+<FuelBar>:
+	canvas.before:
+		Color:
+			rgba: .5,.5,.5,1
+		Rectangle:
+			pos:(self.x+(self.width-self.barWidth)/2,self.y)
+			size:(self.barWidth,self.height)
+		Color:
+			rgba: 0,1,0,1
+		Rectangle:
+			pos:(self.x+(self.width-self.barWidth)/2,self.y)
+			size:(self.barWidth,self.height*self.fill)
+
+<FuelWidget>:
+	label: label
+	meter: meter
+	orientation: 'vertical'
+	padding: 20
+	FuelBar:
+		id: meter
+	Label:
+		id: label
+		text: 'fuel'
+		size_hint:(1,.1)
+
+<FuelOverview>:
+	orientation: 'horizontal'
